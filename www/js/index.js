@@ -4,6 +4,7 @@ window.onload = function () {
   const addTaskButton = document.getElementById("add-task");
   const reset = document.getElementById("reset");
   const taskField = document.getElementById("task-field");
+  const form = document.getElementById("task-form");
   const tasksOnProgress = [];
   const tasksDone = [];
 
@@ -118,5 +119,9 @@ window.onload = function () {
     taskField.value = "";
     taskField.focus();
     refreshTaskLists();
+  });
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the default form submission
   });
 }
