@@ -19,8 +19,20 @@
         </div>
 
         <div role="main" class="ui-content">
-            <h1>Welcome to the App</h1>
-            <p>This is a simple mobile app using jQuery Mobile.</p>
+            <h1>To do app</h1>
+            <form>
+                <label for="add-task">
+                    <input type="text" id="task-field" placeholder="Ajouter une tâche">
+                    <input type="button" id="add-task" value="Ajouter">
+                    <input type="button" id="reset" value="Réinitialiser">
+                </label>
+            </form>
+
+            <div data-role="header">
+                <h1>En cours</h1>
+            </div>
+            <ul id="tasks" data-role="listview" data-inset="true"></ul>
+
         </div>
 
         <div data-role="footer" data-position="fixed">
